@@ -30,7 +30,7 @@ dt_clf.fit(x,y)
 """ 自定义函数：绘测决策边界 """
 def plot_decision_boundary(model, axis):
     x0,x1 = np.meshgrid(
-        np.linspace(axis[0],axis[1],int((axis[1]-axis[0])*500)).reshape((-1,1)),
+        np.linspace(axis[0],axis[1],int((axis[1]-axis[0])*500)).reshape((-1,1)), #这里的reshape()中的参数可能要改
         np.linspace(axis[2],axis[3],int((axis[3]-axis[2])*500)).reshape((-1,1))
     )
     x_new = np.c_[x0.ravel(),x1.ravel()]
